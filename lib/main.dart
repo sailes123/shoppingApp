@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shopping/pages/homePage.dart';
 import 'package:shopping/pages/login.dart';
+import 'package:shopping/utilities/routes.dart';
 
 void main() {
   runApp(MyApp());
@@ -20,8 +21,8 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         "/": (context) => LogIn(),
-        "/home": (context) => HomePage(),
-        "/login": (context) => LogIn(),
+        MyRoutes.homeRoutes: (context) => HomePage(),
+        MyRoutes.loginRoutes: (context) => LogIn(),
       },
     );
   }
